@@ -76,8 +76,8 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 ---
 
 # Aave Lens Protocol contest details
-- $85,500 USDC main award pot
-- $4,500 USDC gas optimization award pot
+- $95,000 USDC main award pot
+- $5,000 USDC gas optimization award pot
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2022-02-aave-lens-contest/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
