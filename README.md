@@ -40,13 +40,13 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 
 # ⭐️ Sponsor: Provide marketing details
 
-- [ ] Your logo (URL or add file to this repo - SVG or other vector format preferred)
-- [ ] Your primary Twitter handle
-- [ ] Any other Twitter handles we can/should tag in (e.g. organizers' personal accounts, etc.)
-- [ ] Your Discord URI
-- [ ] Your website
-- [ ] Optional: Do you have any quirks, recurring themes, iconic tweets, community "secret handshake" stuff we could work in? How do your people recognize each other, for example? 
-- [ ] Optional: your logo in Discord emoji format
+- [ ] Your logo (URL or add file to this repo - SVG or other vector format preferred) (HERE: https://drive.google.com/file/d/1pZWkucWsTqDSHN6x_nSpzoBGUgP1mn0p/view?usp=sharing)
+- [ ] Your primary Twitter handle (https://twitter.com/LensProtocol)
+- [ ] Any other Twitter handles we can/should tag in (e.g. organizers' personal accounts, etc.) (HERE: https://twitter.com/StaniKulechov)
+- [ ] Your Discord URI (HERE: https://discord.gg/FXnzdNBpjT)
+- [ ] Your website HERE: (lens.dev)
+- [ ] Optional: Do you have any quirks, recurring themes, iconic tweets, community "secret handshake" stuff we could work in? How do your people recognize each other, for example? N/A
+- [ ] Optional: your logo in Discord emoji format (HERE: https://drive.google.com/file/d/1afa0aFtB7VLrbmlLXrVP8OYI7fXEEkHH/view?usp=sharing)
 
 ---
 
