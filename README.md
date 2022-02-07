@@ -89,7 +89,7 @@ This repo will be made public before the start of the contest. (C4 delete this l
 [ ⭐️ SPONSORS ADD INFO HERE ]
 ## Things to Look Out For
 
-Documentation, including an overview, setup guide, specification and walthrough can be found [here.](https://docs.lens.dev/docs)
+Documentation, including an overview, setup guide, specification and walthrough can be found [here.](https://docs.lens.dev/docs) The readme is copied over in this readme as well for convenience!
 
 The full repository is located [here.](https://github.com/aave/lens-protocol)
 
