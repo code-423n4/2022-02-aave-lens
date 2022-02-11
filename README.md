@@ -9,6 +9,8 @@
 
 ## Things to Look Out For
 
+Note: The `SecretCodeFollowModule` and `mock` contracts are out of scope.
+
 Documentation, including an overview, setup guide, specification and walthrough can be found [here.](https://docs.lens.dev/docs) The readme is copied over in this readme as well for convenience!
 
 The full repository is located [here.](https://github.com/aave/lens-protocol)
