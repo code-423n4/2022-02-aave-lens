@@ -1,0 +1,281 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q1-2022 / ☑aave-lens-feb10
+==============================================================
+
+[02/08/2022 9:05 PM] itsmetechjay (pinned)
+👋 Hello and welcome to the contest channel for the $100K USDC **Aave Lens** contest!
+
+📆 Contest opens February 10, 2022, at 0:00 UTC and runs through February 16, 2022 at 23:59 UTC (7 days).
+
+Please give a warm welcome to the Aave Lens team, particularly  @Zer0dot, @davidev.eth 👻 and @joshstevens19 who will be available for questions either here in the channel or via DM. 
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this contest, consider enabling notifications for this channel. 🐺 ⏰
+
+{Reactions}
+🥳 (13) chefskiss (5) yay (4) 🎉 (4) 
+
+[02/09/2022 5:48 AM] Deleted User
+hello, been reading through the documentation. curious how the team is thinking about a metadata standard for publication content
+
+
+[02/09/2022 3:39 PM] zer0dot
+This is definitely something we're pretty deep into, paging @joshstevens19 to give more deets!
+
+{Reactions}
+nice (2) 
+
+[02/09/2022 3:48 PM] _wagmi
+We will be using similar metadata structure to opensea the only difference in ours is:
+
+- we have a `mediaMimeType` to explain what mime type the content is (video/music/image)
+- we have a `content` field which is the text for the publication
+- we have a `media` type for lens videos, music and images. `image` will be used for any NFT image but this `media` is a better name to have more then just an image
+- we have an `appId` probably renaming to `source` to allow you to tag sources for the metadata aka if you wanted to build an app and only query stuff with this source you will be able to
+
+still a few final things to flesh it out but this is around about the standards we will be setting. Docs on all this will be coming soon.
+
+
+```ts
+export interface Metadata {
+  /**
+   * The metadata version.
+   */
+  version: string;
+  /**
+   * The metadata id so cid dont clash (could change to publication count but another db call!)
+   */
+  id: string;
+  /**
+   * A human readable description of the item.
+   */
+  description: Markdown;
+  /**
+   * The content of a publication.
+   */
+  content?: Markdown;
+  /**
+   * This is the URL that will appear below the asset's image on OpenSea and others etc
+   * and will allow users to leave OpenSea and view the item on the site.
+   */
+  external_url?: Url;
+  /**
+   * legacy to support OpenSea will store any NFT image here.
+   */
+  image?: Url;
+  /**
+   * Name of the item.
+   */
+  name: string;
+  /**
+   * These are the attributes for the item, which will show up on the OpenSea and others NFT trading websites on the item.
+   */
+  attributes: MetadataAttribute[];
+  /**
+   * This is lens supported media type this can have images, videos and audio files.
+   */
+  media?: Url;
+  /**
+   * This is the mime type of media
+   */
+  mediaMimeType?: MimeType;
+  /**
+   * Legacy for OpenSea and other providers
+   * A URL to a multi-media attachment for the item. The file extensions GLTF, GLB, WEBM, MP4, M4V, OGV,
+   * and OGG are supported, along with the audio-only extensions MP3, WAV, and OGA.
+   * Animation_url also supports HTML pages, allowing you to build rich experiences and interactive NFTs using JavaScript canvas,
+   * WebGL, and more. Scripts and relative paths within the HTML page are now supported. However, access to browser extensions is not supported.
+   */
+  animation_url?: Url;
+  /**
+   * This is the appId the content belongs to
+   */
+  appId: AppId;
+}
+```
+
+
+[02/10/2022 12:02 AM] nicolo.s
+gm
+
+
+[02/10/2022 12:06 AM] trotnixonline
+gm all! quickly intro-ing the Aave Team here.
+
+@Zer0dot is the author of the Lens Protocol, we also have @joshstevens19 from our dev team who is building some awesome APIs on top of Lens and is deeply familiar with the codebase, they will be best to answer the deep technical questions
+
+@davidev.eth 👻 is the PM for Lens and happy to answer questions as well.
+@nicolo.eth - Aave 👻 is also on our Strategy/Product team and able to help too.
+
+Looking forward to seeing what you all find and can't wait to hear your thoughts on Lens Protocol!
+
+
+[02/10/2022 12:07 AM] zer0dot
+Good luck, wardens
+
+{Reactions}
+🐺 (8) 
+
+[02/10/2022 12:07 AM] zer0dot
+:BDeeSalute:
+
+
+[02/10/2022 12:25 AM] dravee
+https://tenor.com/view/kirby-happy-gif-13854421
+
+{Embed}
+https://tenor.com/view/kirby-happy-gif-13854421
+Code4rena - ARCHIVE-Q1-2022 - ☑aave-lens-feb10 [940711400400126042].txt_Files/tenor-33FBF.png
+
+
+[02/10/2022 1:11 AM] zer0dot
+:VeemonWoah:
+
+{Reactions}
+😮 (2) 🤩 (3) 
+
+[02/10/2022 1:35 AM] zer0dot
+Just wanna point you guys to the docs first and foremost
+
+{Reactions}
+👍 
+
+[02/10/2022 1:35 AM] zer0dot
+https://docs.lens.dev/docs/what-is-lens
+
+{Embed}
+https://docs.lens.dev/docs/what-is-lens
+What is Lens? 🌿
+Introduction The Lens Protocol is a Web3 social graph on the Polygon Proof-of-Stake blockchain. It is designed to empower creators to own the links between themselves and their community, forming a fully composable, user-owned social graph. The protocol is built from the ground up with modularity in...
+
+
+[02/10/2022 1:36 AM] zer0dot
+should get you up and running real quick locally
+
+
+[02/10/2022 1:36 AM] zer0dot
+Also includes a nice specification at the bottom
+
+{Reactions}
+prayge (2) 
+
+[02/11/2022 4:13 PM] zer0dot
+Note: The `SecretCodeFollowModule` is out of scope, as it's just an example and is vulnerable.
+
+{Reactions}
+💔 (3) dogkek 🤔 
+
+[02/12/2022 6:35 PM] csanuragjain
+@Zer0dot Is there be a way for user to change their handles or is this something which is planned for implementation in future?
+
+
+[02/12/2022 6:47 PM] zer0dot
+No way and not planned-- but technically possible with an upgrade.
+
+
+[02/12/2022 6:48 PM] csanuragjain
+cool then i can drop those testcases. Thanks
+
+
+[02/14/2022 5:47 PM] geopok20216#4651
+@Zer0dot what is the reason for requiring the whitelisting of modules? Will that job be turned over to a DAO or disabled in the future?
+
+
+[02/14/2022 9:05 PM] pedroais
+Any dev I can DM to confirm if a finding is correct ?
+
+
+[02/14/2022 9:08 PM] cloudellie
+Pinned a message.
+
+
+[02/14/2022 9:09 PM] cloudellie
+Check the pinned message for the list. 🙂
+
+
+[02/14/2022 9:34 PM] pedroais
+Okay
+
+
+[02/15/2022 12:36 AM] zer0dot
+So mainly it's to ensure modules go through a vetting process, it can be turned over to a DAO or disabled via upgrades in the future.
+
+
+[02/15/2022 1:00 AM] geopok20216#4651
+What sort of issues would you be protecting against with the vetting? Just egregious maliciousness or simple things like preventing calls to other contracts?
+
+
+[02/15/2022 1:03 AM] zer0dot
+both, ideally
+
+
+[02/15/2022 1:05 AM] geopok20216#4651
+So modules are only allowed to interact with static call data or Lens-created contracts? Just trying to confirm my understanding of the intent
+
+
+[02/15/2022 1:53 AM] zer0dot
+No they can interact with anything
+
+
+[02/15/2022 1:54 AM] zer0dot
+Like currencies for example
+
+
+[02/15/2022 1:54 AM] zer0dot
+It should just be built and scoped appropriately
+
+
+[02/15/2022 1:57 AM] zer0dot
+also PSA: Multiple follows on the same profile are intended! There are modules that limit this by charging a fee/etc
+
+
+[02/15/2022 2:02 AM] zer0dot
+PSA 2: The profile creation whitelist is the *mitigation* for name squatting. It is assumed that whitelisted creators will implement their own rules for spam prevention/etc
+
+
+[02/15/2022 2:03 AM] zer0dot
+PSA 3: Multiple collects are okay too, there are modules to limit this too!
+
+
+[02/15/2022 7:45 AM] geopok20216#4651
+Great, thanks
+
+
+[02/17/2022 12:02 AM] C4
+**🚨 CONTEST ALERT**
+
+@🐺wardens The **Aave Lens **contest is now closed! Huge thanks to everyone who participated🔍, whether you submitted a finding or not.
+
+What's next: the Aave Lens' team will review the findings over the next couple of days, and then we'll pass them off to the judge. Keep an eye on #📢announcements for regular updates on how the contest is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping an organizer if you have questions along the way!
+
+{Reactions}
+hi5 
+
+[05/06/2022 2:33 PM] dravee
+gm! Can we have some news on how it's progressing please? 🙂 
+I feel like the team was very fast and responsive so, I'm kinda surprised
+
+
+[05/06/2022 2:55 PM] 0xleastwood
+hey sorry this took so long. I was pretty busy with work things and devconnect. I wrapped this up last night so it should be announced fairly soon I'd imagine
+
+
+[05/06/2022 3:14 PM] dravee
+No worries fren 😄. I was just curious. Crazy previous months indeed. Good luck on it, don't rush 💜
+
+{Reactions}
+💜 (2) 
+
+[05/06/2022 3:15 PM] 0xleastwood
+oh I meant I already judged the contest. So its already done 😂
+
+{Reactions}
+👍 (2) 😄 (2) 🧠 (2) 
+
+[05/06/2022 3:16 PM] dravee
+I guess "I wrapped this up last night" meant there's nothing left on your side then 😅 . Didn't really catch it at first. Ok, should be fast indeed then
+
+
+==============================================================
+Exported 40 message(s)
+==============================================================
